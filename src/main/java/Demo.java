@@ -9,7 +9,7 @@ public class Demo {
     private static Callable myCallable(CopyOnWriteArrayList<ArrayList<Integer>> a, int d) {
         return () -> {
             LocalTime localTime = LocalTime.now();
-            System.out.println("Started:" + " " + Thread.currentThread().getId() + " " + localTime);
+            System.out.println("Started:" + " " + Thread.currentThread().getName() + " " + localTime);
             Map<Integer, Integer> cc = new HashMap<>();
             for (int i = 0; i < a.get(a.size() - 1).size(); i++) {
                 if (d % a.get(a.size() - 1).get(i) == 0) {
